@@ -1,0 +1,19 @@
+pipeline{
+ agent any
+ 
+ environment{
+   PATH= "$PATH:/opt/apache-maven-3.8.8"
+ }
+ stages{
+   stage('GetCode'){
+     steps{
+       git 'https://github.com/shindeashok295/01-maven-web-app.git'
+     }
+   }
+  stage('build'){
+    steps{
+      sh 'mvn clean package'
+    }
+   }
+ }
+ }
