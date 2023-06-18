@@ -2,7 +2,7 @@ pipeline{
  agent any
  
  environment{
-   PATH= "$PATH:/opt/apache-maven-3.9.2"
+   PATH= "$PATH:/opt/apache-maven-3.9.2/bin"
  }
  stages{
    stage('GetCode'){
